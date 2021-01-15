@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "declaration": true,
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "target": "es5",
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "outDir": "lib/",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "skipDefaultLibCheck": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"]
+  },
+  "include": ["src/components/**/*.ts", "src/components/**/*.tsx"],
+  "exclude": ["./node_modules/**/*"]
+}
