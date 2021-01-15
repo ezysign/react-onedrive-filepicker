@@ -1,1 +1,2 @@
-export { default as ReactOneDrivePicker } from "./one-drive-picker";
+export { default as ReactOneDriveFilePicker } from "./onedrive-picker";
+export * as ReactOneDriveFilePickerType from "./onedrive-picker";

@@ -96,7 +96,7 @@ const launchOneDrivePicker = (
   });
 };
 
-const ReactOneDrive: React.FC<ReactOneDriveProps> = ({
+const ReactOneDriveFilePicker: React.FC<ReactOneDriveProps> = ({
   clientID,
   onSuccess,
   onCancel,
@@ -138,4 +138,4 @@ const ReactOneDrive: React.FC<ReactOneDriveProps> = ({
   );
 };
 
-export default ReactOneDrive;
+export default ReactOneDriveFilePicker;
