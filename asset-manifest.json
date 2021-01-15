@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-onedrive-picker/static/css/main.44a62f4c.chunk.css",
-    "main.js": "/react-onedrive-picker/static/js/main.5045566c.chunk.js",
-    "main.js.map": "/react-onedrive-picker/static/js/main.5045566c.chunk.js.map",
+    "main.js": "/react-onedrive-picker/static/js/main.1276f27c.chunk.js",
+    "main.js.map": "/react-onedrive-picker/static/js/main.1276f27c.chunk.js.map",
     "runtime-main.js": "/react-onedrive-picker/static/js/runtime-main.12737228.js",
     "runtime-main.js.map": "/react-onedrive-picker/static/js/runtime-main.12737228.js.map",
     "static/js/2.2ffaece0.chunk.js": "/react-onedrive-picker/static/js/2.2ffaece0.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.12737228.js",
     "static/js/2.2ffaece0.chunk.js",
     "static/css/main.44a62f4c.chunk.css",
-    "static/js/main.5045566c.chunk.js"
+    "static/js/main.1276f27c.chunk.js"
   ]
 }
