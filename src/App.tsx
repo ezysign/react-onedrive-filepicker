@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "./sample.svg";
-import { ReactOneDriveFilePicker } from "./components";
 
 function App() {
   return (
@@ -32,20 +31,19 @@ function App() {
       </p>
       <h2>Demo </h2>
       <p>the following is my demo implementation </p>
-
-      <ReactOneDriveFilePicker
-        clientID="c3e71009-3dd7-4fc8-9127-2de5ac14c89f"
-        action="share"
-        multiSelect={true}
-        onSuccess={(result) => {
-          alert(JSON.stringify(result));
+      <iframe
+        src="https://codesandbox.io/embed/elegant-kirch-d5wc6?fontsize=14&hidenavigation=1&theme=dark"
+        style={{
+          width: `100% `,
+          height: `500px`,
+          border: 0,
+          borderRadius: `4px`,
+          overflow: `hidden`,
         }}
-        onCancel={(result) => {
-          alert(JSON.stringify(result));
-        }}
-      >
-        <button>Click Here</button>
-      </ReactOneDriveFilePicker>
+        title="elegant-kirch-d5wc6"
+        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+      ></iframe>
 
       <img src={logo} alt="react-onedrive-implementation" width="450" />
       <footer>
@@ -58,7 +56,7 @@ function App() {
         <p>
           <i className="fab fa-github" />
           &nbsp;
-          <a href="http://github.com/winhtaikaung">Github</a>
+          <a href="https://github.com/ezysign">Github</a>
         </p>
       </footer>
     </div>

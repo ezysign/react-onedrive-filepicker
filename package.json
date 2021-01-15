@@ -1,9 +1,9 @@
 {
-  "name": "react-onedrive-picker",
+  "name": "react-onedrive-filepicker",
   "version": "0.1.0",
   "main": "lib/index.js",
   "description": "OneDrive Sharepoint sites Picker for React",
-  "homepage": "https://winhtaikaung.github.io/react-onedrive-picker",
+  "homepage": "https://ezysign.cc/react-onedrive-filepicker/",
   "keywords": [
     "filepicker",
     "react",
@@ -37,7 +37,7 @@
     "start": "craco start",
     "build": "craco build",
     "build:lib": "rm -rf lib/ && tsc -p build.tsconfig.json",
-    "build:gh": "gh-pages -d build",
+    "build:gh": "react-scripts build && gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
