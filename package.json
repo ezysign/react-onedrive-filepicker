@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "description": "OneDrive Sharepoint sites Picker for React",
+  "homepage": "https://ezysign.cc/react-onedrive-picker",
   "keywords": [
     "filepicker",
     "react",
