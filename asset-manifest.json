@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.44a62f4c.chunk.css",
-    "main.js": "/static/js/main.5045566c.chunk.js",
-    "main.js.map": "/static/js/main.5045566c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f99cf889.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f99cf889.js.map",
-    "static/js/2.2ffaece0.chunk.js": "/static/js/2.2ffaece0.chunk.js",
-    "static/js/2.2ffaece0.chunk.js.map": "/static/js/2.2ffaece0.chunk.js.map",
-    "static/js/3.f26a5676.chunk.js": "/static/js/3.f26a5676.chunk.js",
-    "static/js/3.f26a5676.chunk.js.map": "/static/js/3.f26a5676.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.44a62f4c.chunk.css.map": "/static/css/main.44a62f4c.chunk.css.map",
-    "static/js/2.2ffaece0.chunk.js.LICENSE.txt": "/static/js/2.2ffaece0.chunk.js.LICENSE.txt",
-    "static/media/sample.6c6b8c34.svg": "/static/media/sample.6c6b8c34.svg"
+    "main.css": "/react-onedrive-picker/static/css/main.44a62f4c.chunk.css",
+    "main.js": "/react-onedrive-picker/static/js/main.5045566c.chunk.js",
+    "main.js.map": "/react-onedrive-picker/static/js/main.5045566c.chunk.js.map",
+    "runtime-main.js": "/react-onedrive-picker/static/js/runtime-main.12737228.js",
+    "runtime-main.js.map": "/react-onedrive-picker/static/js/runtime-main.12737228.js.map",
+    "static/js/2.2ffaece0.chunk.js": "/react-onedrive-picker/static/js/2.2ffaece0.chunk.js",
+    "static/js/2.2ffaece0.chunk.js.map": "/react-onedrive-picker/static/js/2.2ffaece0.chunk.js.map",
+    "static/js/3.f26a5676.chunk.js": "/react-onedrive-picker/static/js/3.f26a5676.chunk.js",
+    "static/js/3.f26a5676.chunk.js.map": "/react-onedrive-picker/static/js/3.f26a5676.chunk.js.map",
+    "index.html": "/react-onedrive-picker/index.html",
+    "static/css/main.44a62f4c.chunk.css.map": "/react-onedrive-picker/static/css/main.44a62f4c.chunk.css.map",
+    "static/js/2.2ffaece0.chunk.js.LICENSE.txt": "/react-onedrive-picker/static/js/2.2ffaece0.chunk.js.LICENSE.txt",
+    "static/media/sample.6c6b8c34.svg": "/react-onedrive-picker/static/media/sample.6c6b8c34.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f99cf889.js",
+    "static/js/runtime-main.12737228.js",
     "static/js/2.2ffaece0.chunk.js",
     "static/css/main.44a62f4c.chunk.css",
     "static/js/main.5045566c.chunk.js"
