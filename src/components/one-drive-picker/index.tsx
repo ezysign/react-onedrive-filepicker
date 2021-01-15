@@ -4,6 +4,12 @@ import { appendScript, removeScript } from "./utils";
 
 export type ReactOneDriveProps = {
   clientID: string;
+  children?: React.ReactNode;
+  multiSelect: boolean;
+  onSuccess: (result: OneDriveResult | null) => void;
+  onCancel?: (result: OneDriveResult | null) => void;
+  action?: "download" | "share" | "query";
+  onError?: (reason: any) => void;
 };
 
 export type OneDriveResult = {
@@ -41,6 +47,15 @@ export type OneDriveOpenOptions = {
   openInNewWindow: boolean;
   advanced: {
     filter?: string;
+    queryParameters?: string;
+    redirectUri?: string;
+    endpointHint?: string;
+    accessToken?: string;
+    loginHint?: any;
+    isConsumerAccount?: any;
+    scopes?: any;
+    navigation?: any;
+    createLinkParameters?: { type: string; scope: string };
   };
   success(result: OneDriveResult): void;
   cancel(): void;
@@ -53,17 +68,19 @@ export interface OneDrivePicker {
 
 declare var OneDrive: OneDrivePicker;
 
-const launchOneDrivePicker = (oneDriveApplicationId: string) => {
+const launchOneDrivePicker = (
+  oneDriveApplicationId: string,
+  multiSelect: boolean,
+  advancedOptions?: any,
+  action?: "download" | "share" | "query"
+) => {
   return new Promise<OneDriveResult | null>((resolve, reject) => {
     var odOptions: OneDriveOpenOptions = {
       clientId: oneDriveApplicationId,
-      action: "download",
-      multiSelect: true,
+      action: action || "download",
+      multiSelect: multiSelect,
       openInNewWindow: true,
-      advanced: {
-        //filter: "folder,.png" // Show only folders and png files
-        //filter: "folder,photo" // Show only folders and photos
-      },
+      advanced: advancedOptions || {},
       success: (files: OneDriveResult): void => {
         resolve(files);
       },
@@ -79,7 +96,15 @@ const launchOneDrivePicker = (oneDriveApplicationId: string) => {
   });
 };
 
-const ReactOneDrive: React.FC<ReactOneDriveProps> = ({ clientID }) => {
+const ReactOneDrive: React.FC<ReactOneDriveProps> = ({
+  clientID,
+  onSuccess,
+  onCancel,
+  onError,
+  action,
+  multiSelect,
+  children,
+}) => {
   React.useEffect(() => {
     let mounted = true;
     if (mounted) {
@@ -91,27 +116,25 @@ const ReactOneDrive: React.FC<ReactOneDriveProps> = ({ clientID }) => {
     };
   }, [clientID]);
   return (
-    <button
-      type="button"
-      onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    <div
+      onClick={(e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         e.preventDefault();
-        launchOneDrivePicker(clientID)
+        launchOneDrivePicker(clientID, multiSelect, action)
           .then((result: OneDriveResult | null) => {
             if (result) {
-              for (const file of result.value) {
-                const name = file.name;
-                const url = file["@microsoft.graph.downloadUrl"];
-                console.log({ name: name, url: url });
-              }
+              onSuccess(result);
+            } else {
+              onCancel && onCancel(null);
             }
           })
           .catch((reason: any) => {
-            console.error(reason);
+            onError && onError(reason);
           });
       }}
     >
-      Open from OneDrive
-    </button>
+      {children && children}
+      {!children && "Open With One Drive"}
+    </div>
   );
 };
 
